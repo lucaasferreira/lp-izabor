@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Izabor Cruz - Desafio 21 Dias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'iza-dark': '#010b08', 
+              'iza-green': '#031711', 
+              'iza-green-light': '#0d3329',
+              'iza-gold': '#a3966a', 
+              'iza-gold-light': '#d1c8a9',
+              'iza-gold-text': '#b0a278',
+              'iza-cta': '#036343',
+              'iza-cta-to': '#058c60',
+              'iza-cta-hover': '#047852',
+              'iza-red': '#701010',
+            },
+            animation: {
+              'spin-slow': 'spin 20s linear infinite',
+              'marquee': 'marquee 25s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #010b08;
+        color: #e5e7eb;
+      }
+      .text-gold-gradient {
+        background: linear-gradient(to right, #a3966a, #d1c8a9, #a3966a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .border-gold-gradient {
+        border-image: linear-gradient(to right, #a3966a, #d1c8a9) 1;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
